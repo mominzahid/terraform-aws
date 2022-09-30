@@ -135,5 +135,6 @@ resource "aws_cloudfront_distribution" "this" {
     acm_certificate_arn      = "${aws_acm_certificate_validation.this.certificate_arn}"
     ssl_support_method       = "sni-only"
     minimum_protocol_version = "TLSv1.1_2016"
+  # oak9: aws_cloudfront_distribution.viewer_certificate.minimum_protocol_version is not set to use only secure communication protocols
   }
 }
